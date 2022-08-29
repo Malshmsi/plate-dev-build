@@ -1,1 +1,167 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary: #2d6a77;
+$danger: #FF3B3F;
+$light: #f6f8f8;
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger,
+  "light": $light
+);
+
+.text-gray{
+  color: #a8a9a8;
+}
+
+
+/* header styling*/
+.sidebar,
+.overlay {
+  position: fixed;
+  top: 0;
+  left:0;
+  bottom: 0;
+  opacity: 0.8;
+}
+
+.sidebar {
+  left: -100%;
+  max-width: 300px;
+  transition: all ease 0.25s;
+  overflow-y: auto;
+  z-index: 1032;
+}
+.overlay {
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $primary;
+  visibility: hidden;
+  z-index: 1031;
+}
+
+.main-navigation.active .sidebar {
+  left: 0;
+}
+
+.main-navigation.active .overlay {
+  visibility: visible;
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    flex-direction: row;
+    max-width: 100%;
+    transform: none;
+    transition: none;
+    overflow-y: visible;
+    z-index: auto;
+  }
+  body{
+    padding-top: 88px!important;
+  }
+  .page-content{
+    padding-left: 100px!important;
+    padding-right: 100px!important;
+  }
+  .carousel-item{
+    height: 12rem!important;
+  }
+}
+
+/* header styling*/
+
+/* body style */
+body{
+  padding-top: 3.5rem;
+  color: #474747 !important;
+}
+
+/* dropdown menu */
+@media (max-width: 767px) {
+  .dropdown-menu{
+    position:fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+  }
+  .plate-product{
+    width: 100%;
+  }
+}
+
+/* Discounted Toggle Switch Styling */
+.custom-control-label{
+  position: relative;
+  top: 15px;
+  left: 15px;
+}
+
+.custom-switch > input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.custom-switch > label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 35px;
+  height: 5px;
+  background: #fff;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.custom-switch > label:after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  background: grey;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.custom-switch > input:checked + label {
+  background: $primary;
+}
+
+.custom-switch > input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.custom-switch > label:active:after {
+  width: 130px;
+}
+
+.dropdown-menu{
+  padding: 0!important;
+
+}
+
+.dropdown-toggle-internal::after {
+  display: none !important;;
+}
+
+input[type=checkbox]:checked{
+accent-color: $danger!important;
+}
+
+.filterSet{
+  background-color: $danger!important;
+  color: $light!important;
+}
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";

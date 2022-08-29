@@ -1,0 +1,175 @@
+<!--Plates Catalog Filter-->
+<div class="plates-catalog-contatiner">
+  <div class="mb-4"><h2 class="d-inline mb-2">All Plates </h2><span class="text-gray fw-light h3">({{ this.plates.length }})</span></div>
+  <!-- Catalog Filter Form -->
+  <form style="overflow-y: visible;" class=" bg-primary w-100 d-flex justify-content-around navbar-nav-scroll bg-light p-2 flex-wrap">
+    <!--Upper Catalog Filter-->
+    <div style="overflow-y: visible;" class="upper-catalog-filter navbar-nav-scroll d-flex flex-lg-row flex-sm-row py-2">
+      <!--Emirate Filter-->
+      <div ngbDropdown class="d-inline-block">
+        <button [ngClass]="{'filterSet': selectedEmirates.length > 0 }" type="button" style="color: #606060;" class=" btn bg-white fw-light border-dark mx-2 rounded-1" id="dropdown1" ngbDropdownToggle>Emirate</button>
+        <div ngbDropdownMenu aria-labelledby="dropdown1">
+          <div class="bg-primary d-flex justify-content-between text-light">
+            <div class="px-2 h-100 p-2 text-nowrap"><label class="px-2">Emirate</label> <label class="px-2">99 Plates</label></div>
+            <div class="p-0"><button class="h-100 w-100 btn text-light bg-danger rounded-0 button dropdown-toggle-internal" ngbDropdownToggle>Done</button></div>
+          </div>
+          <div class="select-elements p-3 d-flex flex-column">
+            <ul class="list-unstyled p-0 m-0">
+              <li *ngFor="let emirate of emiratesList"  class="px-0 p-2 style-none" href="#">
+                <input type="checkbox"
+                  value="{{ emirate }}"
+                  name="{{ emirate }}"
+                  (change) ="updateEmiratesModel($event)" />
+                  {{emirate}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        <!-- Style Filter -->
+        <div ngbDropdown class="d-inline-block">
+          <button [ngClass]="{'filterSet': selectedStyles.length > 0 }" type="button" class="btn border-dark  mx-2 rounded-1" id="dropdown1" ngbDropdownToggle>Style</button>
+          <div ngbDropdownMenu aria-labelledby="dropdown1">
+            <div class="bg-primary d-flex justify-content-between text-light">
+              <div class="px-2 h-100 p-2 text-nowrap">Style 99 Plates</div>
+              <div class="p-0"><button class="h-100 w-100 btn text-light bg-danger rounded-0 button dropdown-toggle-internal" ngbDropdownToggle>Done</button></div>
+            </div>
+            <div class="select-elements p-3 d-flex flex-column">
+              <ul class="list-unstyled p-0 m-0">
+                <li *ngFor="let style of stylesList"  class="px-0 p-2 style-none" href="#">
+                  <input type="checkbox"
+                    value="{{ style }}"
+                    name="{{ style }}"
+                    (change) ="updateStylesModel($event)" />
+                    {{style}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <!--Style Filter-->
+      <!--# of Digits Filter-->
+      <div ngbDropdown class="d-inline-block">
+        <button [ngClass]="{'filterSet': selectedDigits.length > 0 }" type="button" class="btn border-dark mx-2 rounded-1" id="dropdown1" ngbDropdownToggle>Digits</button>
+        <div ngbDropdownMenu aria-labelledby="dropdown1">
+          <div class="bg-primary d-flex justify-content-between text-light">
+            <div class="px-2 h-100 p-2 text-nowrap">Digits 99 Plates</div>
+            <div class="p-0"><button class="h-100 w-100 btn text-light bg-danger rounded-0 button dropdown-toggle-internal" ngbDropdownToggle>Done</button></div>
+          </div>
+          <div class="select-elements p-3 d-flex flex-column">
+            <ul class="list-unstyled p-0 m-0">
+              <li *ngFor="let digit of digitsList"  class="px-0 p-2 style-none" href="#">
+                <input type="checkbox"
+                  value="{{ digit.digit }}"
+                  name="{{ digit.digit }}"
+                  (change) ="updateDigitsModel($event)" />
+                  {{ digit.digit }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--# of Digits Filter-->
+      <!--Code Filter-->
+      <div ngbDropdown class="d-inline-block">
+        <button [ngClass]="{'filterSet': selectedCodes.length > 0 }" type="button" class="btn border-dark mx-2 rounded-1" id="dropdown1" ngbDropdownToggle>Code</button>
+        <div ngbDropdownMenu aria-labelledby="dropdown1">
+          <div class="bg-primary d-flex justify-content-between text-light">
+            <div class="px-2 h-100 p-2 text-nowrap">Code 99 Plates</div>
+            <div class="p-0"><button class="h-100 w-100 btn text-light bg-danger rounded-0 button dropdown-toggle-internal" ngbDropdownToggle>Done</button></div>
+          </div>
+          <div class="select-elements p-3 d-flex flex-column">
+            <ul class="list-unstyled p-0 m-0">
+              <li *ngFor="let code of codesList"  class="px-0 p-2" href="#">
+                <input type="checkbox"
+                  value="{{ code.code }}"
+                  name="{{ code.code }}"
+                  (change) ="updateCodesModel($event)" />
+                  {{ code.code }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--Code Filter-->
+
+      </div>
+    <!--Upper Catalog Filter-->
+    <!--Lower Catalog Filter-->
+    <div class="lower-catalog-filter p-2">
+      <div class="d-flex flex-lg-row flex-sm-row">
+        <!-- Discount Toggle -->
+        <div class="pt-1">Discounted</div>
+        <div class="custom-control custom-switch mx-4">
+          <label class="custom-control-label pe-2" for="customSwitch1">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1" checked></label>
+        </div>
+        <!-- Discount Toggle -->
+        <!--Sort Filter-->
+        <div>
+        <button type="button" class="btn border-dark dropdown-toggle mx-2 rounded-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highest to Lowest</button>
+        <div class="dropdown-menu m-2 rounded-0 pt-0">
+          <div class="bg-primary d-flex justify-content-between text-light">
+            <div class="px-2 h-100 p-2">Emirate <span>99 Plates</span></div>
+            <div class="p-0"><button class="h-100 w-100 btn text-light bg-danger rounded-0 button">Done</button></div>
+          </div>
+          <div class="select-elements p-3">
+            <a class="dropdown-item p-2" href="#"><input type="checkbox" id="scales" name="scales" /><label class="px-2" for="scales">Abu Dhabi (5)</label></a>
+            <a class="dropdown-item p-2" href="#"><input type="checkbox" id="scales" name="scales" /><label class="px-2" for="scales">Dubai (92)</label></a>
+            <a class="dropdown-item p-2" href="#"><input type="checkbox" id="scales" name="scales" /><label class="px-2" for="scales">Sharjah (30)</label></a>
+            <a class="dropdown-item p-2" href="#"><input type="checkbox" id="scales" name="scales" /><label class="px-2" for="scales">Ras Al Khaimah (12)</label></a>
+            <a class="dropdown-item p-2" href="#"><input type="checkbox" id="scales" name="scales" /><label class="px-2" for="scales">Fujairah (3)</label></a>
+            <a class="dropdown-item p-2" href="#"><input type="checkbox" id="scales" name="scales" /><label class="px-2" for="scales">Umm Al Quwain (1)</label></a>
+          </div>
+        </div>
+        </div>
+        <!--sort Filter-->
+        <!-- Catalog Seachbar-->
+    <div style="max-width: 20rem;" class="input-group pb-2 catalog-searchbar justify-content-around align-items-end w-sm-100 pb-0">
+      <ng-select
+        name="searchBar"
+        style="background-color: #efefef"
+        class="form-control"
+        [items]="plates"
+        [(ngModel)]="numberSearchedList"
+        bindLabel="plateNumber"
+        bindValue="plateNumber"
+        placeholder="search"
+        appendTo="body"
+        [searchable]="true"
+        [multiple]="true"
+        [clearable]="true"
+        (change)="updateFilteredPlates()"
+        ngDefaultControl
+      >
+      </ng-select>
+      <span class="input-group-text ms-1 bg-danger text-light rounded-1" style="height: 38px;" id="basic-addon2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg>
+    </span>
+    </div>
+    <!--Catalog Searchbar -->
+      </div>
+    <!-- Lower Catalog Filter -->
+    </div>
+<!--Catalog Filter-->
+</form>
+<!-- Catalog Filter Form -->
+<!-- Plates Catalog -->
+<div class="plates-catalog d-flex flex-wrap mt-4 justify-content-start">
+  <!-- Sample Plate -->
+  <div *ngFor="let plate of filteredPlates" class="plate-product bg-light p-lg-3 p-0 d-flex flex-row flex-lg-column justify-content-around align-items-center mb-3 mb-lg-5 mx-2 mx-lg-3">
+    <img src="assets/plate.png" style="height: 50px; max-width:180px" />
+    <div class="details d-flex flex-lg-row flex-sm-column p-3 pt-1 pb-1 justify-content-around">
+      <div class="compare-at d-flex text-decoration-line-through align-items-lg-start align-items-end">{{ plate.price }}</div>
+      <div class="ps-2 d-flex flex-column">
+        <div class="price pb-2">{{ plate.price }}<label class="currency text-danger">AED</label></div>
+        <a href="tel:9710044001" class="nav-link flex-row">{{ plate.phoneNumber }}</a>
+      </div>
+    </div>
+  </div>
+  <!-- Sample Plate -->
+
+</div>
+<!-- Plates Catalog -->

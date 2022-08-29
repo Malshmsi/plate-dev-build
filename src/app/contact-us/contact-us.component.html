@@ -1,0 +1,67 @@
+<!--Section: Contact v.2-->
+<section class="mb-4 px-lg-5 px-3 pt-5">
+  <!--Section heading-->
+  <h2 class="">Contact us</h2>
+  <!--flex-->
+  <div class="mt-5 justify-content-start">
+    <ul class="list-unstyled mb-0 d-flex flex-wrap flex-row">
+      <li class="mx-3 mb-3">
+        <i class="fas fa-phone mt-4 fa-2x text-danger me-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 19">
+            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+          </svg>
+        </i>
+        <a href="tel: 97100033" class="text-danger">+ 01 234 567 89</a>
+      </li>
+      <li class="mx-3">
+        <i class="fas fa-envelope mt-4 fa-2x me-2 text-danger">
+          <svg width="22px" height="18px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope-fill">
+            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+          </svg>
+        </i>
+        <a href="mailto:ahmed.k.alkindi@gmail.com" class="text-danger">contact@mdbootstrap.com</a>
+      </li>
+    </ul>
+  </div>
+  <!--flex-->
+  <div class="row mt-4">
+    <!--Grid column-->
+    <div class="col-md-6 mb-md-0 mb-5">
+      <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-6">
+            <div class="md-form mb-3 rounded-1">
+              <input type="text" id="name" name="name" class="form-control" placeholder="Name" >
+            </div>
+          </div>
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-md-6">
+            <div class="md-form mb-0 mb-3">
+              <input type="text" id="email" name="email" class="form-control" placeholder="Email" >
+            </div>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+        <div class="row mb-4">
+          <!--Grid column-->
+          <div class="col-md-12">
+            <div class="md-form">
+              <textarea type="text" id="message" name="message" style="min-height: 150px;" rows="2" class="form-control md-textarea" placeholder="Your Message" ></textarea>
+            </div>
+          </div>
+        </div>
+        <!--Grid row-->
+      </form>
+      <div class="row px-3 justify-content-end">
+        <a class="btn col-sm-4 col-12 btn-danger rounded-0 text-light" onclick="document.getElementById('contact-form').submit();">Send</a>
+      </div>
+      <div class="status"></div>
+    </div>
+    <!--Grid column-->
+  </div>
+</section>
+<!--Section: Contact v.2-->
