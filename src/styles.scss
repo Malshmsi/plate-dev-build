@@ -1,1 +1,291 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary: #2d6a77;
+$danger: #ff3b3f;
+$light: #f6f8f8;
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger,
+  "light": $light,
+);
+
+.text-gray {
+  color: #a8a9a8;
+}
+
+/* header styling*/
+.sidebar,
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.8;
+}
+
+.sidebar {
+  left: -100%;
+  max-width: 300px;
+  transition: all ease 0.25s;
+  overflow-y: auto;
+  z-index: 1032;
+}
+.overlay {
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $primary;
+  visibility: hidden;
+  z-index: 1031;
+}
+
+.main-navigation.active .sidebar {
+  left: 0;
+}
+
+.main-navigation.active .overlay {
+  visibility: visible;
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    flex-direction: row;
+    max-width: 100%;
+    transform: none;
+    transition: none;
+    overflow-y: visible;
+    z-index: auto;
+  }
+  body {
+    padding-top: 88px !important;
+  }
+  .page-content {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+  .carousel-item {
+    height: 12rem !important;
+  }
+}
+
+/* header styling*/
+
+/* body style */
+body {
+  padding-top: 3.5rem;
+  color: #474747 !important;
+}
+
+/* dropdown menu */
+@media (max-width: 767px) {
+  .dropdown-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .plate-product {
+    width: 100%;
+  }
+}
+
+/* Discounted Toggle Switch Styling */
+.custom-control-label {
+  position: relative;
+  top: 15px;
+  left: 15px;
+}
+
+.custom-switch > input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.custom-switch > label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 35px;
+  height: 5px;
+  background: #fff;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.custom-switch > label:after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  background: grey;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.custom-switch > input:checked + label {
+  background: $primary;
+}
+
+.custom-switch > input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.custom-switch > label:active:after {
+  width: 130px;
+}
+
+.dropdown-menu {
+  padding: 0 !important;
+}
+
+.dropdown-toggle-internal::after {
+  display: none !important;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: $danger !important;
+}
+
+.filterSet {
+  background-color: $danger !important;
+  color: $light !important;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css?family=Muli:200,300,400,600");
+body {
+  font-family: "Muli", sans-serif;
+}
+h5 {
+  font-weight: 600;
+}
+.custom-wrapper {
+  max-width: 460px;
+  margin: 0 auto 50px;
+}
+.h2,
+h2 {
+  font-size: 1.45rem;
+}
+label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+.group-gap {
+  margin-bottom: 40px;
+}
+.btn.focus,
+.btn:focus,
+.form-control:focus,
+.custom-select:focus,
+.custom-select:focus {
+  box-shadow: none;
+}
+.form-control:focus,
+.custom-select:focus {
+  border: 1px solid #f63240;
+}
+
+.btn-group-lg > .btn,
+.btn-lg {
+  padding: 13px 15px 15px;
+  font-size: 16px;
+  border-radius: 0;
+}
+.form-control {
+  height: auto;
+  padding: 15px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 0;
+  background: #2683c5;
+  border: 1px solid #f63240;
+}
+.custom-select {
+  height: auto;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 200;
+  color: #ffff;
+  background-color: #2d6a77;
+  border: none;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #e91e63;
+  background-color: #e91e63;
+}
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none;
+}
+.custom-control-label {
+  cursor: pointer;
+}
+.error:focus,
+.error {
+  border-color: #e91e63;
+  color: #e91e63;
+}
+.invalid-feedback {
+  color: #e91e63;
+}
+.btn-danger,
+body .btn-danger:hover {
+  background: #f63240;
+  border-color: #f63240;
+  color: #fff;
+}
+.nav-item {
+  font-size: larger;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  margin-right: 2em;
+}
+.nav.navbar-nav.navbar-right li a {
+  color: white;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: green;
+  border-color: darken(green, 10%);
+}
+
+.custom-switch.custom-switch-lg {
+  padding-bottom: 1rem;
+  padding-left: 2.25rem;
+
+  & .custom-control-label {
+    padding-left: 0.75rem;
+    padding-top: 0.15rem;
+
+    &::before {
+      border-radius: 1rem;
+      height: 1.5rem;
+      width: 2.5rem;
+    }
+
+    &::after {
+      border-radius: 0.65rem;
+      height: calc(1.5rem - 4px);
+      width: calc(1.5rem - 4px);
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::after {
+    transform: translateX(1rem);
+  }
+}
+
+.custom-control-input:checked ~ .custom-control-label::after {
+  transform: translateX(1.5rem);
+}
