@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -17,6 +17,12 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PlatesCatalogComponent } from './plates-catalog/plates-catalog.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SliderModule } from 'primeng/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { HammerModule } from '../../node_modules/@angular/platform-browser';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { SlidesComponent } from './slides/slides.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutUsComponent,
     ContactUsComponent,
     PlatesCatalogComponent,
+    SlidesComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,8 +46,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgMultiSelectDropDownModule,
     InfiniteScrollModule,
     DropDownListModule,
+    BrowserAnimationsModule,
+    SliderModule,
+    MatSlideToggleModule,
+    HammerModule,
+    InputSwitchModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

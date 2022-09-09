@@ -289,3 +289,6 @@ body .btn-danger:hover {
 .custom-control-input:checked ~ .custom-control-label::after {
   transform: translateX(1.5rem);
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
