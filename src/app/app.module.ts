@@ -23,7 +23,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HammerModule } from '../../node_modules/@angular/platform-browser';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { SlidesComponent } from './slides/slides.component';
-
+import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +51,7 @@ import { SlidesComponent } from './slides/slides.component';
     MatSlideToggleModule,
     HammerModule,
     InputSwitchModule,
+    NgxBootstrapIconsModule.pick(allIcons),
   ],
   providers: [],
   bootstrap: [AppComponent],
