@@ -298,6 +298,9 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+.dropdown-toggle::after {
+  display: none;
+}
 .p-inputswitch {
   margin-top: 3px;
 }

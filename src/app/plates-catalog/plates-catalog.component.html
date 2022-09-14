@@ -20,11 +20,12 @@
           [ngClass]="{ filterSet: selectedEmirates.length > 0 }"
           type="button"
           style="color: #606060"
-          class="menuitem text-black btn bg-white fw-light border-dark"
+          class="menuitem text-black btn fw-light border-dark"
           id="dropdown1"
           ngbDropdownToggle
         >
           Emirate
+          <i-bs name="chevron-down" width="10" height="10"></i-bs>
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdown1">
           <div class="bg-primary d-flex">
@@ -66,6 +67,7 @@
           ngbDropdownToggle
         >
           Style
+          <i-bs name="chevron-down" width="10" height="10"> </i-bs>
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdown2">
           <div class="bg-primary d-flex justify-content-between text-light">
@@ -109,6 +111,7 @@
           ngbDropdownToggle
         >
           Digits
+          <i-bs name="chevron-down" width="10" height="10"> </i-bs>
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdown3">
           <div class="bg-primary d-flex justify-content-between text-light">
@@ -152,6 +155,7 @@
           ngbDropdownToggle
         >
           Code
+          <i-bs name="chevron-down" width="10" height="10"> </i-bs>
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdown4">
           <div class="bg-primary d-flex justify-content-between text-light">
@@ -192,6 +196,7 @@
           aria-expanded="false"
         >
           Highest to Lowest
+          <i-bs name="chevron-down" width="10" height="10"> </i-bs>
         </button>
       </div>
       <!-- Discount Toggle -->
