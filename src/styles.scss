@@ -299,7 +299,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 .p-inputswitch {
-  margin-left: auto;
+  margin-top: 3px;
 }
 .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider::before {
   background: red !important;
@@ -326,4 +326,5 @@ body {
   border-style: none;
   width: auto;
   height: 40px;
+  text-align: justify;
 }

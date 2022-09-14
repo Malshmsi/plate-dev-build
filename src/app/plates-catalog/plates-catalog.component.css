@@ -17,9 +17,10 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 #disc {
-  font-size: large;
+  font-size: 19px;
   font-weight: 500;
-  margin-top: 10px;
+  margin-top: 13px;
+  margin-left: 6px;
 }
 
 #checkbox {
