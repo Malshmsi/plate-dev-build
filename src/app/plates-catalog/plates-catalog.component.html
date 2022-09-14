@@ -20,7 +20,7 @@
           [ngClass]="{ filterSet: selectedEmirates.length > 0 }"
           type="button"
           style="color: #606060"
-          class="menuitem text-black btn bg-white fw-light border-dark m-auto"
+          class="menuitem text-black btn bg-white fw-light border-dark"
           id="dropdown1"
           ngbDropdownToggle
         >
@@ -29,8 +29,8 @@
         <div ngbDropdownMenu aria-labelledby="dropdown1">
           <div class="drops bg-primary d-flex justify-content-between">
             <div class="drops px-2 h-100 p-2 text-nowrap">
-              <label class="dropsHead px-2">Emirate</label>
-              <label class="drops px-2">99 Plates</label>
+              <label class="drops">Emirate</label>
+              <label class="drops">99 Plates</label>
             </div>
             <div class="p-0">
               <button
@@ -65,14 +65,14 @@
           [ngClass]="{ filterSet: selectedStyles.length > 0 }"
           type="button"
           class="menuitem btn border-dark m-auto"
-          id="dropdown1"
+          id="dropdown2"
           ngbDropdownToggle
         >
           Style
         </button>
-        <div ngbDropdownMenu aria-labelledby="dropdown1">
+        <div ngbDropdownMenu aria-labelledby="dropdown2">
           <div class="bg-primary d-flex justify-content-between text-light">
-            <div class="drops px-2 h-100 p-2 text-nowrap">Style 99 Plates</div>
+            <div class="drops h-100 p-2 text-nowrap">Style 99 Plates</div>
             <div class="p-0">
               <button
                 class="menuitem h-100 w-100 btn text-light bg-danger rounded-0 button dropdown-toggle-internal"
@@ -108,14 +108,14 @@
           [ngClass]="{ filterSet: selectedDigits.length > 0 }"
           type="button"
           class="menuitem btn border-dark m-auto"
-          id="dropdown1"
+          id="dropdown3"
           ngbDropdownToggle
         >
           Digits
         </button>
-        <div ngbDropdownMenu aria-labelledby="dropdown1">
+        <div ngbDropdownMenu aria-labelledby="dropdown3">
           <div class="bg-primary d-flex justify-content-between text-light">
-            <div class="drops px-2 h-100 p-2 text-nowrap">Digits 99 Plates</div>
+            <div class="drops h-100 p-2 text-nowrap">Digits 99 Plates</div>
             <div class="p-0">
               <button
                 class="menuitem h-100 w-100 btn text-light bg-danger rounded-0 button dropdown-toggle-internal"
@@ -151,14 +151,14 @@
           [ngClass]="{ filterSet: selectedCodes.length > 0 }"
           type="button"
           class="menuitem btn border-dark m-auto"
-          id="dropdown1"
+          id="dropdown4"
           ngbDropdownToggle
         >
           Code
         </button>
-        <div ngbDropdownMenu aria-labelledby="dropdown1">
+        <div ngbDropdownMenu aria-labelledby="dropdown4">
           <div class="bg-primary d-flex justify-content-between text-light">
-            <div class="drops px-2 h-100 p-2 text-nowrap">Code 99 Plates</div>
+            <div class="drops h-100 p-2 text-nowrap">Code 99 Plates</div>
             <div class="p-0">
               <button
                 class="menuitem h-100 w-100 btn text-light bg-danger rounded-0 button dropdown-toggle-internal"
@@ -200,6 +200,8 @@
       <!-- Discount Toggle -->
       <div ngbDropdown class="d-inline-block">
         <label id="disc" class="disci">Discounted</label>
+      </div>
+      <div class="d-inline-block my-1">
         <app-slides></app-slides>
       </div>
     </div>
