@@ -2,9 +2,12 @@
   color: white;
 }
 .menuitem {
-  padding: 1em !important;
-  height: 4em !important;
+  /* padding: 1em !important; */
+  /* padding: 0; */
+  /* height: 4em !important; */
   display: flexbox;
+  font-weight: 10;
+  border-width: 0.5px;
 }
 .dropsHead {
   color: white;
@@ -19,12 +22,10 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.disci {
+/* .disci {
   height: fit-content;
-  padding: 0.5em;
   display: inline-block;
-  margin-top: 0.4em;
-}
+} */
 #disc {
   font-size: large;
   font-weight: 500;
@@ -33,4 +34,15 @@
 #checkbox {
   padding-left: 2em;
   margin-left: 0.5em;
+}
+.d-inline-block {
+  margin-left: 1em;
+}
+.btn {
+  border-radius: 0px;
+}
+.mainform {
+  background-color: whitesmoke;
+  border: 0.5px solid lightgray;
+  margin: auto;
 }

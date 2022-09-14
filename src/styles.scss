@@ -290,5 +290,40 @@ body .btn-danger:hover {
   transform: translateX(1.5rem);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.p-inputswitch {
+  margin-left: 1em;
+}
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider::before {
+  background: red !important;
+}
+.p-inputswitch .p-component .p-inputswitch-checked {
+  background: white;
+}
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider ::hover {
+  background: white !important;
+}
+// .p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover
+//   .p-inputswitch-slider {
+//   background: white !important;
+// }
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+  background: white !important;
+}
+.p-inputswitch .p-inputswitch-slider {
+  background: white;
+}
+.ng-select {
+  color: #222;
+  font-size: large;
+  border-style: none;
+  width: auto;
+  height: 40px;
+}

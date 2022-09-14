@@ -7,7 +7,7 @@
   <!-- Catalog Filter Form -->
   <form
     style="overflow-y: visible"
-    class="bg-primary w-100 d-flex justify-content-around navbar-nav-scroll bg-light p-2 flex-wrap"
+    class="mainform d-flex navbar-nav-scroll p-2 flex-wrap"
   >
     <!--Upper Catalog Filter-->
     <div
@@ -20,7 +20,7 @@
           [ngClass]="{ filterSet: selectedEmirates.length > 0 }"
           type="button"
           style="color: #606060"
-          class="menuitem text-black btn bg-white fw-light border-dark mx-2 rounded-1"
+          class="menuitem text-black btn bg-white fw-light border-dark m-auto"
           id="dropdown1"
           ngbDropdownToggle
         >
@@ -64,7 +64,7 @@
         <button
           [ngClass]="{ filterSet: selectedStyles.length > 0 }"
           type="button"
-          class="menuitem btn border-dark mx-2 rounded-1"
+          class="menuitem btn border-dark m-auto"
           id="dropdown1"
           ngbDropdownToggle
         >
@@ -107,7 +107,7 @@
         <button
           [ngClass]="{ filterSet: selectedDigits.length > 0 }"
           type="button"
-          class="menuitem btn border-dark mx-2 rounded-1"
+          class="menuitem btn border-dark m-auto"
           id="dropdown1"
           ngbDropdownToggle
         >
@@ -150,7 +150,7 @@
         <button
           [ngClass]="{ filterSet: selectedCodes.length > 0 }"
           type="button"
-          class="menuitem btn border-dark mx-2 rounded-1"
+          class="menuitem btn border-dark m-auto"
           id="dropdown1"
           ngbDropdownToggle
         >
@@ -182,21 +182,23 @@
             </ul>
           </div>
         </div>
+        <!--Sort Filter-->
       </div>
-      <!--Code Filter-->
+      <!--high to low Filter-->
 
-      <!--Sort Filter-->
-      <button
-        type="button"
-        class="menuitem btn border-dark dropdown-toggle rounded-1"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-      >
-        Highest to Lowest
-      </button>
+      <div ngbDropdown class="d-inline-block">
+        <button
+          type="button"
+          class="menuitem btn border-dark m-auto dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Highest to Lowest
+        </button>
+      </div>
       <!-- Discount Toggle -->
-      <div class="container-fluid">
+      <div ngbDropdown class="d-inline-block">
         <label id="disc" class="disci">Discounted</label>
         <app-slides></app-slides>
       </div>
@@ -205,10 +207,10 @@
     <!--Upper Catalog Filter-->
     <!--Lower Catalog Filter-->
     <div class="lower-catalog-filter p-2">
-      <div class="d-flex flex-lg-row flex-sm-row">
+      <div class="d-flex flex-wrap">
         <div class="dropdown-menu m-2 rounded-0 pt-0">
-          <div class="bg-primary d-flex justify-content-between text-light">
-            <div class="px-2 h-100 p-2">Emirate <span>99 Plates</span></div>
+          <!-- <div class="bg-primary d-flex justify-content-between text-light">
+             <div class="px-2 h-100 p-2">Emirate <span>99 Plates</span></div>   
             <div class="p-0">
               <button
                 class="menuitem h-100 w-100 btn text-light bg-danger rounded-0 button"
@@ -216,7 +218,7 @@
                 Done
               </button>
             </div>
-          </div>
+          </div> -->
           <div class="select-elements p-3">
             <a class="dropdown-item p-2" href="#"
               ><input type="checkbox" id="scales" name="scales" /><label
@@ -263,11 +265,9 @@
           </div>
         </div>
       </div>
-      <!--sort Filter-->
-      <!-- Catalog Seachbar-->
       <div
         style="max-width: 20rem"
-        class="input-group pb-2 catalog-searchbar justify-content-around align-items-end w-sm-100 pb-0"
+        class="input-group pb-2 catalog-searchbar justify-content-around"
       >
         <ng-select
           name="searchBar"
@@ -277,7 +277,7 @@
           [(ngModel)]="numberSearchedList"
           bindLabel="plateNumber"
           bindValue="plateNumber"
-          placeholder="search"
+          placeholder="Search"
           appendTo="body"
           [searchable]="true"
           [multiple]="true"
@@ -305,12 +305,12 @@
           </svg>
         </span>
       </div>
-      <!--Catalog Searchbar -->
     </div>
     <!-- Lower Catalog Filter -->
     <!--Catalog Filter-->
   </form>
   <!-- Catalog Filter Form -->
+
   <!-- Plates Catalog -->
   <div class="plates-catalog d-flex flex-wrap mt-4 justify-content-start">
     <!-- Sample Plate -->
