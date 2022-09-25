@@ -4,7 +4,6 @@
   margin-left: 3px;
 }
 .menuitem {
-  display: flexbox;
   font-weight: 10;
   border-width: 0.5px;
 }

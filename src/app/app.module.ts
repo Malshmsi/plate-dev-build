@@ -24,6 +24,8 @@ import { HammerModule } from '../../node_modules/@angular/platform-browser';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { SlidesComponent } from './slides/slides.component';
 import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +54,7 @@ import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
     HammerModule,
     InputSwitchModule,
     NgxBootstrapIconsModule.pick(allIcons),
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

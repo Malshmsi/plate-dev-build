@@ -5,6 +5,7 @@ import { FormControl } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { filter } from 'rxjs';
+import { faSlidersH } from '@fortawesome/free-solid-svg-icons';
 
 export interface numberPlate {
   id: number;
@@ -24,6 +25,8 @@ export interface numberPlate {
   styleUrls: ['./plates-catalog.component.css'],
 })
 export class PlatesCatalogComponent implements OnInit {
+  faSlidersH = faSlidersH;
+  constructor() {}
   plates: numberPlate[] = [
     {
       id: 1,
@@ -169,8 +172,6 @@ export class PlatesCatalogComponent implements OnInit {
       discounted: false,
     },
   ];
-
-  constructor() {}
 
   //filtered plates
   filteredPlates: numberPlate[] = [];

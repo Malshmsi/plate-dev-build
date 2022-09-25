@@ -63,11 +63,11 @@ $theme-colors: (
     z-index: auto;
   }
   body {
-    padding-top: 88px !important;
+    // padding-top: 88px !important;
   }
   .page-content {
-    padding-left: 100px !important;
-    padding-right: 100px !important;
+    // padding-left: 100px !important;
+    // padding-right: 100px !important;
   }
   .carousel-item {
     height: 12rem !important;
@@ -290,14 +290,6 @@ body .btn-danger:hover {
   transform: translateX(1.5rem);
 }
 
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
 .dropdown-toggle::after {
   display: none;
 }
@@ -313,10 +305,6 @@ body {
 .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider ::hover {
   background: white !important;
 }
-// .p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover
-//   .p-inputswitch-slider {
-//   background: white !important;
-// }
 .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
   background: white !important;
 }

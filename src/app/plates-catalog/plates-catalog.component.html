@@ -1,26 +1,31 @@
 <!--Plates Catalog Filter-->
 <div class="plates-catalog-contatiner">
-  <div class="mb-4">
-    <h2 class="d-inline mb-2">All Plates</h2>
+  <div class="d-flex">
+    <h2 class="d-inline-flex">All Plates</h2>
     <span class="text-gray fw-light h3">({{ this.plates.length }})</span>
   </div>
   <!-- Catalog Filter Form -->
   <form
     style="overflow-y: visible"
-    class="mainform d-flex navbar-nav-scroll p-2 flex-wrap"
+    class="mainform d-flex navbar-nav-scroll flex-wrap"
   >
     <!--Upper Catalog Filter-->
     <div
       style="overflow-y: visible"
-      class="upper-catalog-filter navbar-nav-scroll d-flex flex-lg-row flex-sm-row py-2"
+      class="upper-catalog-filter navbar-nav-scroll d-flex"
     >
+      <div>
+        <button class="text-blue btn mx-2 my-3">
+          <fa-icon [icon]="faSlidersH" style="font-size: 20px"></fa-icon>
+        </button>
+      </div>
       <!--Emirate Filter-->
-      <div ngbDropdown class="d-inline-block">
+      <div ngbDropdown class="d-inline-flex">
         <button
           [ngClass]="{ filterSet: selectedEmirates.length > 0 }"
           type="button"
           style="color: #606060"
-          class="menuitem text-black btn fw-light border-dark"
+          class="menuitem text-black btn border-dark mx-2 my-3"
           id="dropdown1"
           ngbDropdownToggle
         >
@@ -29,7 +34,7 @@
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdown1">
           <div class="bg-primary d-flex">
-            <div class="drops p-2 text-nowrap">Emirate 99 Plates</div>
+            <div class="drops text-nowrap">Emirate 99 Plates</div>
             <div>
               <button
                 class="menuitem h-100 w-100 btn text-light bg-danger rounded-0 button dropdown-toggle-internal"
@@ -39,11 +44,11 @@
               </button>
             </div>
           </div>
-          <div class="select-elements p-3 d-flex flex-column">
-            <ul class="list-unstyled p-0 m-0">
+          <div class="select-elements d-flex flex-column">
+            <ul class="list-unstyled">
               <li
                 *ngFor="let emirate of emiratesList"
-                class="px-0 style-none"
+                class="style-none"
                 href="#"
               >
                 <input
@@ -58,11 +63,11 @@
         </div>
       </div>
       <!-- Style Filter -->
-      <div ngbDropdown class="d-inline-block">
+      <div ngbDropdown class="d-inline-flex">
         <button
           [ngClass]="{ filterSet: selectedStyles.length > 0 }"
           type="button"
-          class="menuitem btn border-dark m-auto"
+          class="menuitem btn border-dark mx-2 my-3"
           id="dropdown2"
           ngbDropdownToggle
         >
@@ -71,23 +76,19 @@
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdown2">
           <div class="bg-primary d-flex justify-content-between text-light">
-            <div class="drops h-100 p-2 text-nowrap">Style 99 Plates</div>
-            <div class="p-0">
+            <div class="drops text-nowrap">Style 99 Plates</div>
+            <div class="">
               <button
-                class="menuitem h-100 w-100 btn text-light bg-danger rounded-0 button dropdown-toggle-internal"
+                class="menuitem btn text-light bg-danger rounded-0 button dropdown-toggle-internal"
                 ngbDropdownToggle
               >
                 Done
               </button>
             </div>
           </div>
-          <div class="select-elements p-3 d-flex flex-column">
-            <ul class="list-unstyled p-0 m-0">
-              <li
-                *ngFor="let style of stylesList"
-                class="px-0 p-2 style-none"
-                href="#"
-              >
+          <div class="select-elements d-flex flex-column">
+            <ul class="list-unstyled">
+              <li *ngFor="let style of stylesList" class="style-none" href="#">
                 <input
                   type="checkbox"
                   value="{{ style }}"
@@ -102,11 +103,11 @@
       </div>
       <!--Style Filter-->
       <!--# of Digits Filter-->
-      <div ngbDropdown class="d-inline-block">
+      <div ngbDropdown class="d-inline-flex">
         <button
           [ngClass]="{ filterSet: selectedDigits.length > 0 }"
           type="button"
-          class="menuitem btn border-dark m-auto"
+          class="menuitem btn border-dark mx-2 my-3"
           id="dropdown3"
           ngbDropdownToggle
         >
@@ -115,23 +116,19 @@
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdown3">
           <div class="bg-primary d-flex justify-content-between text-light">
-            <div class="drops h-100 p-2 text-nowrap">Digits 99 Plates</div>
-            <div class="p-0">
+            <div class="drops text-nowrap">Digits 99 Plates</div>
+            <div class="">
               <button
-                class="menuitem h-100 w-100 btn text-light bg-danger rounded-0 button dropdown-toggle-internal"
+                class="menuitem btn text-light bg-danger rounded-0 button dropdown-toggle-internal"
                 ngbDropdownToggle
               >
                 Done
               </button>
             </div>
           </div>
-          <div class="select-elements p-3 d-flex flex-column">
-            <ul class="list-unstyled p-0 m-0">
-              <li
-                *ngFor="let digit of digitsList"
-                class="px-0 p-2 style-none"
-                href="#"
-              >
+          <div class="select-elements d-flex flex-column">
+            <ul class="list-unstyled">
+              <li *ngFor="let digit of digitsList" class="style-none" href="#">
                 <input
                   type="checkbox"
                   value="{{ digit.digit }}"
@@ -146,11 +143,11 @@
       </div>
       <!--# of Digits Filter-->
       <!--Code Filter-->
-      <div ngbDropdown class="d-inline-block">
+      <div ngbDropdown class="d-inline-flex">
         <button
           [ngClass]="{ filterSet: selectedCodes.length > 0 }"
           type="button"
-          class="menuitem btn border-dark m-auto"
+          class="menuitem btn border-dark mx-2 my-3"
           id="dropdown4"
           ngbDropdownToggle
         >
@@ -159,18 +156,18 @@
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdown4">
           <div class="bg-primary d-flex justify-content-between text-light">
-            <div class="drops h-100 p-2 text-nowrap">Code 99 Plates</div>
-            <div class="p-0">
+            <div class="drops text-nowrap">Code 99 Plates</div>
+            <div class="">
               <button
-                class="menuitem h-100 w-100 btn text-light bg-danger rounded-0 button dropdown-toggle-internal"
+                class="menuitem btn text-light bg-danger rounded-0 button dropdown-toggle-internal"
                 ngbDropdownToggle
               >
                 Done
               </button>
             </div>
           </div>
-          <div class="select-elements p-3 d-flex flex-column">
-            <ul class="list-unstyled p-0 m-0">
+          <div class="select-elements d-flex flex-column">
+            <ul class="list-unstyled">
               <li *ngFor="let code of codesList" class="px-0 p-2" href="#">
                 <input
                   type="checkbox"
@@ -187,10 +184,10 @@
       </div>
       <!--high to low Filter-->
 
-      <div ngbDropdown class="d-inline-block">
+      <div ngbDropdown class="d-inline-flex">
         <button
           type="button"
-          class="menuitem btn border-dark m-auto dropdown-toggle"
+          class="menuitem btn border-dark mx-2 my-3 dropdown-toggle"
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
@@ -200,19 +197,19 @@
         </button>
       </div>
       <!-- Discount Toggle -->
-      <div ngbDropdown class="d-inline-block">
+      <div ngbDropdown class="d-inline-flex mx-2 my-3 menuitem">
         <label id="disc" class="disci">Discounted</label>
       </div>
-      <div class="d-inline-block my-1">
+      <div class="d-inline-flex mx-2 my-3 menuitem">
         <app-slides></app-slides>
       </div>
     </div>
     <!-- Discount Toggle -->
     <!--Upper Catalog Filter-->
     <!--Lower Catalog Filter-->
-    <div class="lower-catalog-filter p-2">
-      <div class="d-flex flex-wrap">
-        <div class="dropdown-menu m-2 rounded-0 pt-0">
+    <div class="lower-catalog-filter">
+      <div class="d-flex flex-wrap mx-2 my-2">
+        <div class="dropdown-menu rounded-0 pt-0">
           <!-- <div class="bg-primary d-flex justify-content-between text-light">
              <div class="px-2 h-100 p-2">Emirate <span>99 Plates</span></div>   
             <div class="p-0">
@@ -223,45 +220,45 @@
               </button>
             </div>
           </div> -->
-          <div class="select-elements p-3">
-            <a class="dropdown-item p-2" href="#"
+          <div class="select-elements">
+            <a class="dropdown-item" href="#"
               ><input type="checkbox" id="scales" name="scales" /><label
-                class="px-2"
+                class=""
                 for="scales"
                 >Abu Dhabi (5)</label
               ></a
             >
-            <a class="dropdown-item p-2" href="#"
+            <a class="dropdown-item" href="#"
               ><input type="checkbox" id="scales" name="scales" /><label
-                class="px-2"
+                class=""
                 for="scales"
                 >Dubai (92)</label
               ></a
             >
-            <a class="dropdown-item p-2" href="#"
+            <a class="dropdown-item" href="#"
               ><input type="checkbox" id="scales" name="scales" /><label
-                class="px-2"
+                class=""
                 for="scales"
                 >Sharjah (30)</label
               ></a
             >
-            <a class="dropdown-item p-2" href="#"
+            <a class="dropdown-item" href="#"
               ><input type="checkbox" id="scales" name="scales" /><label
-                class="px-2"
+                class=""
                 for="scales"
                 >Ras Al Khaimah (12)</label
               ></a
             >
-            <a class="dropdown-item p-2" href="#"
+            <a class="dropdown-item" href="#"
               ><input type="checkbox" id="scales" name="scales" /><label
-                class="px-2"
+                class=""
                 for="scales"
                 >Fujairah (3)</label
               ></a
             >
-            <a class="dropdown-item p-2" href="#"
+            <a class="dropdown-item" href="#"
               ><input type="checkbox" id="scales" name="scales" /><label
-                class="px-2"
+                class=""
                 for="scales"
                 >Umm Al Quwain (1)</label
               ></a
@@ -271,7 +268,7 @@
       </div>
       <div
         style="max-width: 20rem"
-        class="input-group pb-2 catalog-searchbar justify-content-around"
+        class="input-group catalog-searchbar justify-content-around"
       >
         <ng-select
           name="searchBar"
@@ -324,15 +321,15 @@
     >
       <img src="assets/plate.png" style="height: 50px; max-width: 180px" />
       <div
-        class="details d-flex flex-lg-row flex-sm-column p-3 pt-1 pb-1 justify-content-around"
+        class="details d-flex flex-lg-row flex-sm-column justify-content-around"
       >
         <div
           class="compare-at d-flex text-decoration-line-through align-items-lg-start align-items-end"
         >
           {{ plate.price }}
         </div>
-        <div class="ps-2 d-flex flex-column">
-          <div class="price pb-2">
+        <div class="d-flex flex-column">
+          <div class="price">
             {{ plate.price }}<label class="currency text-danger">AED</label>
           </div>
           <a href="tel:9710044001" class="nav-link flex-row">{{
